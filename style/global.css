@@ -7,7 +7,7 @@
 }
 
 :root {
-    font-family: "Raleway", sans-serif;
+    --ff-base: "Raleway", sans-serif;
 
     /* colors */
     --pink-light: #C59DD2;
@@ -31,18 +31,26 @@
     --text-label: #BAC6C9;
 
     /* fonts */
-    --title-lg: bold 3rem;
-    --title-md: bold 2.5rem;
-    --title-sm: bold 2rem;
-    --title-xs: bold 1rem;
-    --subtitle: medium 2rem/200%;
-    --button: bold .875rem;
-    --link: medium .875rem;
-    --tag: bold .625rem;
+    --title-lg: 700 3rem var(--ff-base);
+    --title-md: 700 2.5rem var(--ff-base);
+    --title-sm: 700 2rem var(--ff-base);
+    --title-xs: 700 1rem var(--ff-base);
+    --subtitle: 500 2rem/200% var(--ff-base);
+    --button: 700 .875rem var(--ff-base);
+    --link: 500 .875rem var(--ff-base);
+    --tag: 700 .625rem var(--ff-base);
 }
 
 body {
     background-color: var(--shape-background);
+    color: var(--text-body);
+}
+
+h1 {
+    font: var(--title-lg);
+    color: var(--text-title);
+    opacity: 0;
+    animation: appear-background 2s linear forwards;
 }
 
 .container {
