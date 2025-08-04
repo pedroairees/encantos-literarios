@@ -32,6 +32,102 @@
     }
 }
 
+.text-hero {
+    margin-block: 13.125rem 25rem;
+    position: relative;
+
+    p {
+        text-align: center;
+        font: 500 2rem/200% var(--ff-base);
+        color: rgba(226, 231, 233, 0.50);
+
+        & strong {
+            font: 700 2rem/200% var(--ff-base);
+            color: rgba(226, 231, 233, 0.50);
+        }
+    }
+
+    &:hover {
+        .pt1 {
+            animation: animation-hero-text 300ms linear forwards;
+
+            & > strong {
+                animation: animation-hero-strong 300ms linear forwards;
+            }
+        }
+        .img-1 {
+            animation: apper-img-hero 200ms linear forwards;        
+        }
+
+        .pt2 {
+            animation: animation-hero-text 300ms 500ms linear forwards;
+
+            & > strong {
+                animation: animation-hero-strong 300ms 500ms linear forwards;
+            }
+        }
+        .img-2 {
+            animation: apper-img-hero 200ms 500ms linear forwards;        
+        }
+
+        .pt3 {
+            animation: animation-hero-text 300ms 1.3s linear forwards;
+
+            & > strong {
+                animation: animation-hero-strong 300ms 1.3s linear forwards;
+            }
+        }
+        .img-3 {
+            animation: apper-img-hero 200ms 1.3s linear forwards;        
+        }
+    }
+
+    & .img-1 {
+        width: 5.5rem;
+        height: 5.5rem;
+        position: absolute;
+        left: 50%;
+        top: -70px;
+        transform: rotate(20.758deg);
+        scale: 0;
+    }
+    & .img-2 {
+        position: absolute;
+        width: 5rem;
+        height: 5rem;
+        top: 150px;
+        transform: rotate(99.47deg);
+        scale: 0;
+    }
+    & .img-3 {
+        position: absolute;
+        transform: rotate(-14.483deg);
+        top: 120px;
+        right: 8.75rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        scale: 0;
+    }
+}
+
+@keyframes animation-hero-text {
+    to {
+        color: var(--text-body);
+    }
+}
+
+@keyframes animation-hero-strong {
+    to {
+        color: var(--blue-light);
+    }
+}
+
+@keyframes apper-img-hero {
+    to {
+        scale: 1;
+    }
+}
+
 @keyframes appear-background {
     0% {
         opacity: 0;
