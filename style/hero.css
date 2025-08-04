@@ -1,0 +1,29 @@
+.hero {
+    position: relative;
+    height: 100vh;
+
+    & > img {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        z-index: -1;
+        opacity: 0;
+        animation: appear-background 2s linear forwards;
+    }
+
+    & nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-block: 3.5rem 10rem;
+    }
+}
+
+@keyframes appear-background {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
