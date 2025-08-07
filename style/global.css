@@ -53,6 +53,11 @@ h1 {
     animation: appear-background 2s linear forwards;
 }
 
+h2 {
+    font: var(--title-sm);
+    color: var(--text-title);
+}
+
 .container {
     max-width: 90rem;
     width: 100%;

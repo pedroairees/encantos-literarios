@@ -24,10 +24,17 @@
         align-items: center;
         gap: 2rem;
 
+        & h1 {
+            max-width: 41rem;
+            text-align: center;
+        }
+
         & p {
             font: 400 1.25rem/140% var(--ff-base);
             opacity: 0;
             animation: appear-background 2s 500ms linear forwards;
+            max-width: 35.5rem;
+            text-align: center;
         }
     }
 }
@@ -107,6 +114,14 @@
         width: 4.5rem;
         height: 4.5rem;
         scale: 0;
+    }
+
+    & img {
+        transition: transform 500ms;
+    }
+
+    & img:hover {
+        transform: rotate(30deg);
     }
 }
 
