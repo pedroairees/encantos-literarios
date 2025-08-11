@@ -8,7 +8,19 @@
     & .pricing-table {
         display: flex;
         justify-content: center;
+        align-items: center;
         padding-block: 8.75rem 25rem;
+        width: 100%;
+        position: relative;
+
+        &:hover {
+            & .price-block:nth-child(1) {
+                animation: slide-right 300ms forwards;
+            }
+            & .price-block:nth-child(3) {
+                animation: slide-left 300ms forwards;
+            }
+        }
     }
 
     & h2 {
@@ -77,10 +89,37 @@
             padding-block: .75rem;
             margin-top: .75rem;
         }
+
+        &:nth-child(1) {
+            transform: translateX(100%);
+            z-index: 1;
+            transition: scale 500ms, background-color 500ms, box-shadow 500ms;
+        }
+        &:nth-child(1):hover {
+            scale: 1.1;
+            box-shadow: 0 0 66px 0 rgba(53, 139, 185, 0.10);
+            background-color: var(--shape-hover);
+             z-index: 4;
+        }
+        &:nth-child(3) {
+            transform: translateX(-100%);
+            z-index: 2;
+            transition: scale 500ms, background-color 500ms, box-shadow 500ms;
+        }
+        &:nth-child(3):hover {
+            scale: 1.1;
+            box-shadow: 0 0 66px 0 rgba(53, 139, 185, 0.10);
+            background-color: var(--shape-hover);
+            z-index: 4;
+        }
     }
 
     & .price-block.semestral {
         position: relative;
+        z-index: 3;
+        width: fit-content;
+        transition: scale 500ms, background-color 500ms, box-shadow 500ms;
+
         & > img {
             width: 2.8125rem;
             height: 3.125rem;
@@ -111,5 +150,26 @@
         & a {
             background-color: var(--pink-dark);
         }
+
+        &:hover {
+            scale: 1.1;
+            box-shadow: 0 0 66px 0 rgba(53, 139, 185, 0.10);
+            background-color: var(--shape-hover);
+            z-index: 4;
+        }
+    }
+}
+
+@keyframes slide-right {
+    100% {
+        transform: translateX(10%) translateY(50px);
+        rotate: -15deg;
+    }
+}
+
+@keyframes slide-left {
+    100% {
+        transform: translateX(-10%) translateY(50px);
+        rotate: 15deg;
     }
 }
