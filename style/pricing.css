@@ -5,8 +5,15 @@
     align-items: center;
     margin-block: 12.125rem 19.25rem;
 
+    & .pricing-table {
+        display: flex;
+        justify-content: center;
+        padding-block: 8.75rem 25rem;
+    }
+
     & h2 {
         max-width: 18.375rem;
+        text-align: center;
     }
 
     & .price-block {
@@ -14,16 +21,95 @@
         flex-direction: column;
         max-width: 17.875rem;
         height: 26rem;
-        padding: 2rem 2rem;
+        padding: 1.75rem 2rem;
         justify-content: space-between;
         background-color: var(--shape-base);
         border-radius: 1.5rem;
         border: 1px solid var(--shape-stroke);
 
+        & .value {
+            & .plano {
+                font: var(--title-xs);
+                color: var(--blue-light);
+            }
+
+            & p {
+                font: var(--title-md);
+                color: var(--text-title);
+                margin-block: 1.5rem .5rem;
+
+                & > span {
+                    font: var(--title-xs);
+                }
+            }
+
+            & .price {
+                font: 400 .875rem/140% var(--ff-base);
+                color: var(--text-label);
+            }
+        }
+
         & .benefits {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            justify-content: flex-start;
+            gap: .75rem;
+
+            & span {
+                display: flex;
+                align-items: flex-start;
+                gap: .5rem;
+                font: 400 .75rem/140% var(--ff-base);
+
+                & img {
+                    width: 1.3rem;
+                    height: 1.3rem;
+                }
+            }
+        }
+
+        & a {
+            text-align: center;
+            font: var(--button);
+            color: var(--text-title);
+            background-color: var(--blue-dark);
+            border-radius: .5rem;
+            padding-block: .75rem;
+            margin-top: .75rem;
+        }
+    }
+
+    & .price-block.semestral {
+        position: relative;
+        & > img {
+            width: 2.8125rem;
+            height: 3.125rem;
+            position: absolute;
+            left: 2rem;
+            top: -3.2rem;
+        }
+
+        & .plans-uti {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            & > span {
+                color: var(--pink-light);
+            }
+
+            & span:nth-child(2) {
+                font: var(--tag);
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                background-color: var(--shape-stroke);
+                border-radius: 999px;
+                padding: .5625rem 1.25rem;
+                color: var(--text-body);
+            }
+        }
+        & a {
+            background-color: var(--pink-dark);
         }
     }
 }
