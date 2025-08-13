@@ -3,7 +3,6 @@
     flex-direction: column;
     gap: 3.5rem;
     align-items: center;
-    margin-block: 12.125rem 19.25rem;
     position: relative;
 
     &::before {
@@ -37,6 +36,7 @@
     & h2 {
         max-width: 18.375rem;
         text-align: center;
+        z-index: 10;
     }
 
     & .price-block {
