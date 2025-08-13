@@ -77,30 +77,46 @@
             
         }
 
-        &:hover {
+        & {
             & img[src*="bookmark-purple"] {
-                animation: appear-markbook-purple 500ms linear forwards;
+                animation: appear-markbook-purple linear forwards;
+                animation-timeline: view();
+                animation-range: 20vh 70vh;
             }
             & img[src*="bookmark-yellow"] {
-                animation: appear-markbook-yellow 500ms linear forwards;
+                animation: appear-markbook-yellow linear forwards;
+                animation-timeline: view();
+                animation-range: 20vh 70vh;
             }
             & img[src*="pin.png"] {
-                animation: appear-pin 500ms linear forwards;
+                animation: appear-pin linear forwards;
+                animation-timeline: view();
+                animation-range: 20vh 30vh;
             }
             & img[src*="broche.svg"] {
-                animation: appear-broxe-text 500ms linear forwards;
+                animation: appear-broxe-text linear forwards;
+                animation-timeline: view();
+                animation-range: 20vh 40vh;
             }
             & img[src*="capa-dura.svg"] {
-                animation: appear-capa-dura 500ms linear forwards;
+                animation: appear-capa-dura linear forwards;
+                animation-timeline: view();
+                animation-range: 10vh 20vh;
             }
             & img[src*="marca-pagina.svg"] {
-                animation: appear-marca-pagina 500ms linear forwards;
+                animation: appear-marca-pagina linear forwards;
+                animation-timeline: view();
+                animation-range: 20vh 50vh;
             }
         }
     }
 }
 
 @keyframes appear-markbook-purple {
+    50% {
+        transform: translateX(25rem);
+        rotate: 21deg;
+    }
     100% {
         transform: translateX(22rem);
         rotate: 21deg;
@@ -108,6 +124,10 @@
 }
 
 @keyframes appear-markbook-yellow {
+    50% {
+        transform: translateX(18rem);
+        rotate: 15deg;
+    }
     100% {
         transform: translateX(15rem);
         rotate: 15deg;
@@ -115,6 +135,10 @@
 }
 
 @keyframes appear-pin {
+    50% {
+        rotate: -10deg;
+        transform: translateX(-18rem);
+    }
     100% {
         rotate: -10deg;
         transform: translateX(-15rem);
@@ -122,18 +146,27 @@
 }
 
 @keyframes appear-broxe-text {
+    50% {
+        transform: translateX(-25rem);
+    }
     100% {
         transform: translateX(-22rem);
     }
 }
 
 @keyframes appear-capa-dura {
+    50% {
+        transform: translateX(-22rem) translateY(-30rem);
+    }
     100% {
         transform: translateX(-19rem) translateY(-28rem);
     }
 }
 
 @keyframes appear-marca-pagina {
+    50% {
+        transform: translateY(20rem) translateX(21rem);
+    }
     100% {
         transform: translateY(17rem) translateX(16rem);
     }
